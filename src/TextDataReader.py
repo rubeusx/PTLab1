@@ -25,7 +25,8 @@ class TextDataReader(DataReader):
                     if self.key:  # защита от отсутствия ключа
                         try:
                             subj, score = line.strip().split(":", maxsplit=1)
-                            self.students[self.key].append((subj.strip(), int(score.strip())))
+                            self.students[self.key].append((subj.strip(),
+                                                           int(score.strip())))
                         except ValueError:
                             print(f"Ошибка в строке: {line.strip()}")
         return self.students
