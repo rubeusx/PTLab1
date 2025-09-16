@@ -3,7 +3,7 @@ import argparse
 import sys
 
 from CalcRating import CalcRating
-#from TextDataReader import TextDataReader
+# from TextDataReader import TextDataReader
 from yaml_data_reader import YamlDataReader
 
 
