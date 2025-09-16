@@ -2,8 +2,9 @@
 import argparse
 import sys
 
-from CalcRating import CalcRating
+# from CalcRating import CalcRating
 # from TextDataReader import TextDataReader
+from student_analyzer import StudentAnalyzer
 from yaml_data_reader import YamlDataReader
 
 
@@ -20,10 +21,10 @@ def main():
 
     reader = YamlDataReader()
     students = reader.read(path)
-    print("Students: ", students)
+    print("Студенты: ", students)
 
-    rating = CalcRating(students).calc()
-    print("Rating: ", rating)
+    count = StudentAnalyzer(students).count_excellent_students()
+    print("Количество отличников: ", count)
 
 
 if __name__ == "__main__":
